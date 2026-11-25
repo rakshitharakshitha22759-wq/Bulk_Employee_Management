@@ -1,16 +1,58 @@
-# React + Vite
+# Bulk Employee Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN application for managing employee records, with search and sorting, and persistent storage in MongoDB Atlas.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add and delete employee records
+- Search by employee name or employee code
+- Sort by employee code (numeric order) and employee name (A-Z / Z-A)
+- Display of the total number of employees
+- REST API with data stored in MongoDB Atlas
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer    | Technologies                |
+|----------|-----------------------------|
+| Frontend | React (Vite), Axios         |
+| Backend  | Node.js, Express.js         |
+| Database | MongoDB Atlas, Mongoose     |
 
-## Expanding the ESLint configuration
+## Project Structure
+backend/     Express server, routes, controllers, models
+frontend/    React application
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- A MongoDB Atlas cluster and connection string
+
+### Backend
+cd backend
+npm install
+
+Create a .env file in the backend folder, using .env.example as a template:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+
+Start the server:
+node server.js
+
+
+### Frontend
+
+In a second terminal:
+
+cd frontend
+npm install
+npm run dev
+
+The application runs at http://localhost:5173
+
+## Author
+Rakshitha G N 
+GitHub: [rakshitharakshitha22759-wq](https://github.com/rakshitharakshitha22759-wq)
